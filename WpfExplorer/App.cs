@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Jamesnet.Wpf.Controls;
+using WpfExplorer.Support.UI.Units;
 
 namespace WpfExplorer
 {
@@ -13,7 +14,8 @@ namespace WpfExplorer
         protected override Window CreateShell()
         {
             // Temporary Window instance
-            return new Window();
+            //return new Window();
+            return new DarkWindow();
         }
     }
 }

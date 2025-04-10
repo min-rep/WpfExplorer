@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:WpfExplorer.Forms.UI.Units">
+
+    <Style TargetType="{x:Type units:FolderTreeView}">
+        <Setter Property="Template">
+            <!--Setter 대신 Baseon 속성 추가하여 다른 리소스를 기반으로 상속(기본 컨트롤 적용)
+            본 컨트롤도 기반으로 사용할 수 있게 되며, CustomControl 형식으로 컨트롤을 만들 때 기존 요소가 모두 제거되는 문제도 해결-->
+            <!--<Style TargetType="{x:Type units:FolderTreeView}"
+           BasedOn="{StaticResource {x:Type TreeView}}">-->
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:FolderTreeView}">
+                    <ItemsPresenter/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

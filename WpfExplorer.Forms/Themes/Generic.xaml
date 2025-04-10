@@ -4,6 +4,7 @@
     xmlns:local="clr-namespace:WpfExplorer.Forms.UI.Views">
 
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/WpfExplorer.Forms;component/Themes/Units/FolderTreeView.xaml"/>
         <ResourceDictionary Source="/WpfExplorer.Forms;component/Themes/Views/ExplorerWindow.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     <!--<Style TargetType="{x:Type local:ExplorerWindow}">
@@ -18,4 +19,5 @@
             </Setter.Value>
         </Setter>
     </Style>-->
+
 </ResourceDictionary>

@@ -1,18 +1,33 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:based="clr-namespace:WpfExplorer.Support.UI.Units;assembly=WpfExplorer.Support"
-                    xmlns:views="clr-namespace:WpfExplorer.Forms.UI.Views">
+                    xmlns:views="clr-namespace:WpfExplorer.Forms.UI.Views"
+                    xmlns:units="clr-namespace:WpfExplorer.Forms.UI.Units">
+ 
+<!--
+    XAML 네임스페이스 관리 규칙 ( 네임스페이스 선언 순서는 아래와 같은 우선순위 기준을 따르고 있습니다.)
+    1. 외부 라이브러리 (예 Nuget)
+    2. 외부 프로젝트
+    3. 로컬 프로젝트
+-->
 
     <Style 
         TargetType="{x:Type views:ExplorerWindow}" 
         BasedOn="{StaticResource {x:Type based:DarkWindow}}">
         <Setter Property="Content">
             <Setter.Value>
-                <TextBlock 
+                <!-- == 화면 출력되는지 확인용== -->
+                <!--<TextBlock 
                     Text="Window 탐색기 만드는 중" 
                     FontSize="18"
                     Foreground="#FFFFFF"
-                    Margin="10"/>
+                    Margin="10"/>-->
+                <!-- =========================== -->
+                <units:FolderTreeView>
+                    <TreeViewItem>Lucas</TreeViewItem>
+                    <TreeViewItem>Kevin</TreeViewItem>
+                    <TreeViewItem>Joolo</TreeViewItem>
+                </units:FolderTreeView>
             </Setter.Value>
         </Setter>
     </Style>
